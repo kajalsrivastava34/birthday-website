@@ -1,0 +1,128 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+.card {
+    background: white;
+    width: 350px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 0 25px gray;
+    animation: zoom 2s infinite alternate;
+}
+
+
+h1 {
+    color: #ff4081;
+    font-size: 40px;
+}
+
+
+h2 {
+    color: #e91e63;
+}
+
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+
+button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background:#e91e63;
+}
+
+
+#message {
+    color:#ff4081;
+    margin-top:20px;
+}
+
+
+@keyframes zoom {
+    from {
+        transform:scale(1);
+    }
+
+    to {
+        transform:scale(1.05);
+    }
+}
+
+
+/* Balloons */
+
+.balloon {
+    position:absolute;
+    bottom:-100px;
+    left:10%;
+    font-size:60px;
+    animation: fly 6s infinite;
+}
+
+
+.balloon2 {
+    left:50%;
+    animation-delay:2s;
+}
+
+
+.balloon3 {
+    left:80%;
+    animation-delay:4s;
+}
+
+
+@keyframes fly {
+
+    from {
+        bottom:-100px;
+    }
+
+    to {
+        bottom:100%;
+    }
+}
+
+
+/* Fireworks */
+
+.sparkle {
+    position:absolute;
+    font-size:30px;
+    animation:blast 2s linear;
+}
+
+
+@keyframes blast {
+
+    from {
+        transform:scale(0);
+    }
+
+    to {
+        transform:scale(2);
+        opacity:0;
+    }
+}
